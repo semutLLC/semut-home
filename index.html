@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Semut drafts quotes, review responses, appointment replies, and other repetitive business messages for local business owners.">
-  <title>Semut LLC | Message Drafts for Local Businesses</title>
+  <title>Semut LLC | Practical Tools for Local Businesses</title>
   <style>
     :root {
       --ink: #14231f; --muted: #5c6c67; --green: #174f3f; --dark: #0c382c;
@@ -61,6 +61,12 @@
     .example h3 { margin: 24px 0 8px; font-size: 1.25rem; line-height: 1.25; }
     .example p { margin-bottom: 0; color: var(--muted); }
     .flow { margin-top: auto; padding-top: 24px; color: var(--dark); font-size: .84rem; font-weight: 800; }
+    .building { background: var(--pale); }
+    .building-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 80px; align-items: start; }
+    .building-copy { padding: 34px; border-left: 3px solid var(--gold); border-radius: 0 18px 18px 0; background: var(--white); }
+    .building-copy p { color: var(--muted); font-size: 1.08rem; }
+    .building-copy p:last-child { margin-bottom: 0; }
+    .building-note { margin-top: 22px; color: var(--green) !important; font-weight: 800; }
     .trust { background: var(--dark); color: var(--white); }
     .trust .eyebrow { color: #bce7d6; }
     .trust .section-head > p:last-child { color: #c7d9d3; }
@@ -91,7 +97,7 @@
     .footer-links a:hover { text-decoration: underline; }
     @media (max-width: 860px) {
       .hero { padding: 145px 0 80px; }
-      .hero-grid, .two, .pricing-grid { grid-template-columns: 1fr; gap: 52px; }
+      .hero-grid, .two, .pricing-grid, .building-grid { grid-template-columns: 1fr; gap: 52px; }
       .mock { max-width: 560px; }
       .examples, .trust-grid { grid-template-columns: 1fr; }
       .example { min-height: 0; }
@@ -123,9 +129,9 @@
         <div>
           <p class="eyebrow">Built for local business owners</p>
           <h1>Focus on your craft. Semut helps with repetitive business messages.</h1>
-          <p class="intro">Turn a few owner notes into a professional draft for quotes, reviews, appointment questions, and everyday customer follow-ups.</p>
+          <p class="intro">We're building Semut to help with quote replies, review responses, appointment questions, and customer follow-ups. Add the details you know; Semut helps shape them into a professional draft.</p>
           <a class="button" href="https://trace.semutllc.com/new">Try Semut Trace <span aria-hidden="true">&rarr;</span></a>
-          <p class="hero-note">Send one request and see the draft workflow. You review before anything is sent.</p>
+          <p class="hero-note">Try it with one real request. Review the draft, change it, and decide whether it helps.</p>
         </div>
         <div class="mock" aria-label="Example Semut quote draft">
           <div class="mock-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="status">Draft ready</span></div>
@@ -142,24 +148,34 @@
         <div class="problem-copy">
           <p class="eyebrow">The work after the work</p>
           <h2>Good customer communication should not take over your evening.</h2>
-          <p>A quote request arrives between jobs. A review needs a thoughtful answer. A customer wants to confirm tomorrow's appointment. Each message is small, but together they steal hours.</p>
-          <p>Semut helps create the first draft, so you can respond professionally without starting from a blank screen.</p>
+          <p>A quote request arrives between jobs. A review needs a thoughtful answer. A customer wants to confirm tomorrow's appointment. Each message is small, but together they take real time.</p>
+          <p>Semut helps with the first draft, so you have a useful place to start instead of another blank screen.</p>
         </div>
       </div>
     </section>
     <section id="examples" aria-labelledby="examples-title">
       <div class="shell">
-        <div class="section-head"><p class="eyebrow">What this looks like</p><h2 id="examples-title">Real requests. Useful drafts.</h2><p>Semut fits into the way local businesses already work. Give it the facts; get a draft ready for your judgment.</p></div>
+        <div class="section-head"><p class="eyebrow">What this looks like</p><h2 id="examples-title">Real requests. A practical first draft.</h2><p>We're starting with the repetitive messages local business owners told us take time. You provide the facts and context; Semut helps organize them into a draft.</p></div>
         <div class="examples">
-          <article class="example"><span class="example-num">EXAMPLE 01</span><h3>A customer asks for a quote</h3><p>Add your price, timing, scope, and any job details. Semut turns those notes into a clear quote reply.</p><div class="flow">Customer request &rarr; owner notes &rarr; draft</div></article>
-          <article class="example"><span class="example-num">EXAMPLE 02</span><h3>A customer leaves a review</h3><p>Share the review and the tone you want. Semut drafts a warm, professional response that sounds like a real business owner.</p><div class="flow">Customer review &rarr; context &rarr; response</div></article>
-          <article class="example"><span class="example-num">EXAMPLE 03</span><h3>A customer asks about an appointment</h3><p>Add the confirmed time and anything they should know. Semut prepares a helpful response without the back-and-forth.</p><div class="flow">Question &rarr; schedule details &rarr; reply</div></article>
+          <article class="example"><span class="example-num">EXAMPLE 01</span><h3>A customer asks for a quote</h3><p>Add your price, timing, scope, and job details. Semut can help turn those notes into a clear reply for you to review.</p><div class="flow">Customer request &rarr; owner notes &rarr; draft</div></article>
+          <article class="example"><span class="example-num">EXAMPLE 02</span><h3>A customer leaves a review</h3><p>Share the review and the tone you want. Semut can help draft a thoughtful response that you can edit in your own voice.</p><div class="flow">Customer review &rarr; context &rarr; response</div></article>
+          <article class="example"><span class="example-num">EXAMPLE 03</span><h3>A customer asks about an appointment</h3><p>Add the confirmed time and anything they should know. Semut can prepare a helpful response for your approval.</p><div class="flow">Question &rarr; schedule details &rarr; reply</div></article>
+        </div>
+      </div>
+    </section>
+    <section class="building" aria-labelledby="building-title">
+      <div class="building-grid shell">
+        <div><p class="eyebrow">Built by listening</p><h2 id="building-title">We're building this with local businesses.</h2></div>
+        <div class="building-copy">
+          <p>Every business works differently. We don't want to force small businesses into complicated software they do not need.</p>
+          <p>We want to listen, understand your daily workflow, and build tools that help with the repetitive work so you can focus on the quality of your service.</p>
+          <p class="building-note">Your feedback helps us decide what to improve and what to leave simple.</p>
         </div>
       </div>
     </section>
     <section class="trust" aria-labelledby="trust-title">
       <div class="shell">
-        <div class="section-head"><p class="eyebrow">Your business. Your decision.</p><h2 id="trust-title">Semut drafts. You stay in control.</h2><p>AI should help with the repetitive part, not take your judgment out of the process.</p></div>
+        <div class="section-head"><p class="eyebrow">Your business. Your decision.</p><h2 id="trust-title">Semut helps with the draft. You stay in control.</h2><p>The tool should support your judgment, not replace it.</p></div>
         <div class="trust-grid">
           <article class="trust-card"><span class="trust-icon" aria-hidden="true">1</span><h3>You review before sending</h3><p>Read, edit, or rewrite every draft before it reaches a customer.</p></article>
           <article class="trust-card"><span class="trust-icon" aria-hidden="true">2</span><h3>Semut does not auto-send</h3><p>Customer messages are never sent automatically by the draft workflow.</p></article>
@@ -170,16 +186,16 @@
     <section aria-labelledby="pricing-title">
       <div class="pricing-grid shell">
         <div>
-          <p class="eyebrow">Simple early access</p>
-          <h2 id="pricing-title">Useful help without another complicated system.</h2>
-          <p class="lead">Semut is an AI assistant for local businesses that want faster drafts, professional communication, and an owner-controlled workflow.</p>
+          <p class="eyebrow">A simple place to start</p>
+          <h2 id="pricing-title">Professional draft help without a complicated system.</h2>
+          <p class="lead">Early access is a chance for us to learn what is genuinely useful in your day-to-day work, while giving you a straightforward tool to try.</p>
         </div>
         <div class="price-card">
           <span class="price-badge">Early access</span>
-          <h3>AI Assistant for Local Businesses</h3>
-          <p class="price">$99 <small>/ month</small></p>
-          <p class="offer">Intro offer: first month $49</p>
-          <ul class="price-list"><li>Drafts for common customer messages</li><li>Quote, review, and appointment workflows</li><li>Owner review before sending</li><li>Free sample task available</li></ul>
+          <h3>Practical help for common business messages</h3>
+          <p class="price">$99 <small>/ month, starting at</small></p>
+          <p class="offer">Early participant offer: first month $49</p>
+          <ul class="price-list"><li>Professional drafts for common customer messages</li><li>Quote, review, and appointment workflows</li><li>Owner review before anything is sent</li><li>A free sample task to see if it fits</li></ul>
           <a class="button" href="https://trace.semutllc.com/new">Try a sample request <span aria-hidden="true">&rarr;</span></a>
           <span class="sample">No auto-sending. See the draft first.</span>
         </div>
@@ -187,14 +203,14 @@
     </section>
     <section class="cta">
       <div class="cta-in shell">
-        <div><h2>Send one request. See exactly how the draft workflow feels.</h2><p>Start with a quote, review response, appointment question, or another message on your list.</p></div>
+        <div><h2>Have a real message on your list? Try it with Semut.</h2><p>Start with a quote, review response, appointment question, or follow-up. See the draft, then tell us what would make it more useful.</p></div>
         <a class="button" href="https://trace.semutllc.com/new">Try Semut Trace <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
   </main>
   <footer>
     <div class="footer-in shell">
-      <div><a class="brand" href="#top"><span class="mark">S</span>Semut LLC</a><p class="footer-copy">Practical AI assistance for local businesses.</p></div>
+      <div><a class="brand" href="#top"><span class="mark">S</span>Semut LLC</a><p class="footer-copy">Building practical tools with local businesses.</p></div>
       <div class="footer-links"><a href="https://trace.semutllc.com/new">Semut Trace</a><a href="mailto:hello@semutllc.com">hello@semutllc.com</a></div>
     </div>
   </footer>
