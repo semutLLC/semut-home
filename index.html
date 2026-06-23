@@ -1,75 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semut LLC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            background: #f7f7f7;
-            color: #222;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 32px;
-            border-radius: 12px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 18px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 12px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-    </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Professional AI-assisted tools for local businesses.">
+<title>Semut LLC | Less Admin. More Time for Your Work.</title>
+<style>
+:root{--ink:#14231f;--muted:#5d6d68;--green:#174f3f;--dark:#0c382c;--mint:#dff3e9;--pale:#f2f8f4;--gold:#f0ae58;--cream:#fbfaf5;--line:#dce5df;--max:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}.shell{width:min(calc(100% - 40px),var(--max));margin:auto}a{color:inherit}.header{position:absolute;z-index:2;width:100%;padding:24px 0}.nav,.footer-in{display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:11px;font-size:1.12rem;font-weight:800;letter-spacing:-.02em;text-decoration:none}.mark{display:grid;width:38px;height:38px;place-items:center;border-radius:11px;background:var(--green);color:#fff;font-size:.82rem}.nav>a:last-child,.links a{color:var(--dark);font-size:.92rem;font-weight:750;text-decoration:none}
+.hero{position:relative;overflow:hidden;padding:170px 0 105px;background:radial-gradient(circle at 82% 16%,rgba(240,174,88,.23),transparent 25%),linear-gradient(135deg,#f6fbf7,#edf7f1 60%,#f8f0de)}.hero:after{position:absolute;right:-150px;bottom:-250px;width:560px;height:560px;border:1px solid rgba(23,79,63,.12);border-radius:50%;content:""}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:76px;align-items:center}.eye{display:inline-flex;align-items:center;gap:9px;margin:0 0 22px;color:var(--green);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.eye:before{width:26px;height:2px;background:var(--gold);content:""}h1,h2,h3,p{margin-top:0}h1{margin-bottom:24px;font-size:clamp(2.75rem,5.7vw,5.25rem);line-height:.99;letter-spacing:-.06em}.intro{max-width:610px;margin-bottom:34px;color:var(--muted);font-size:clamp(1.08rem,2vw,1.28rem)}.btn{display:inline-flex;min-height:54px;padding:0 24px;align-items:center;justify-content:center;gap:10px;border-radius:999px;background:var(--green);box-shadow:0 11px 25px rgba(23,79,63,.2);color:#fff;font-weight:800;text-decoration:none;transition:.18s}.btn:hover{background:var(--dark);transform:translateY(-2px)}a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.note{margin:18px 0 0;color:var(--muted);font-size:.88rem}
+.mock{padding:26px;border:1px solid rgba(23,79,63,.12);border-radius:28px;background:rgba(255,255,255,.84);box-shadow:0 22px 60px rgba(20,50,41,.12);backdrop-filter:blur(10px)}.mock-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.dots{display:flex;gap:6px}.dots i{width:8px;height:8px;border-radius:50%;background:#cad8d0}.status{padding:6px 10px;border-radius:99px;background:var(--mint);color:var(--green);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.label{margin-bottom:9px;color:var(--muted);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.mock h2{font-size:1.28rem;line-height:1.3}.line{height:8px;margin-top:10px;border-radius:99px;background:#e7ece9}.line:nth-child(2){width:92%}.line:nth-child(3){width:76%}.approve{display:flex;align-items:center;gap:13px;margin-top:26px;padding:14px;border-radius:14px;background:var(--pale);color:var(--dark);font-size:.86rem;font-weight:700}.check{display:grid;flex:0 0 30px;height:30px;place-items:center;border-radius:50%;background:var(--green);color:#fff}
+section{padding:105px 0}.head{max-width:680px;margin-bottom:52px}h2{margin-bottom:18px;font-size:clamp(2rem,4vw,3.35rem);line-height:1.08;letter-spacing:-.045em}.head>p:last-child,.lead{color:var(--muted);font-size:1.08rem}.problem{background:#fff}.two{display:grid;grid-template-columns:.88fr 1.12fr;gap:90px;align-items:center}.time{padding:34px;border-radius:28px;background:var(--dark);color:#fff}.time strong{display:block;margin-bottom:12px;color:#bce7d6;font-size:clamp(3.4rem,8vw,6.6rem);line-height:.9;letter-spacing:-.07em}.time p{margin:0;color:#d7e7e1;font-size:1.05rem}.copy p{color:var(--muted);font-size:1.08rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:180px;padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:.18s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(20,50,41,.08)}.icon{display:grid;width:42px;height:42px;margin-bottom:28px;place-items:center;border-radius:12px;background:var(--mint);color:var(--green);font-size:1.15rem;font-weight:800}.card h3{margin-bottom:5px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.workflow{background:var(--dark);color:#fff}.workflow .eye{color:#bce7d6}.workflow .head>p:last-child{color:#c7d9d3}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{position:relative;padding:25px 18px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.055)}.step:not(:last-child):after{position:absolute;z-index:2;top:50%;right:-19px;display:grid;width:26px;height:26px;place-items:center;border-radius:50%;background:var(--gold);color:var(--dark);content:"→";font-weight:900;transform:translateY(-50%)}.num{display:block;margin-bottom:24px;color:#8eb8a8;font-size:.72rem;font-weight:800;letter-spacing:.1em}.step h3{margin-bottom:7px;font-size:1rem}.step p{margin:0;color:#b8ccc5;font-size:.82rem}
+.why{grid-template-columns:.9fr 1.1fr;gap:70px}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px}.benefit{padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff}.benefit:last-child{grid-column:1/-1;background:var(--pale);border-color:#cfe5d9}.benefit h3{margin-bottom:5px;font-size:1rem}.benefit p{margin:0;color:var(--muted);font-size:.88rem}.cta{padding-top:20px}.cta-in{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:58px;border-radius:28px;background:linear-gradient(120deg,var(--mint),#f8efd9)}.cta-in h2{max-width:650px;margin-bottom:10px}.cta-in p{margin:0;color:var(--muted)}.cta-in .btn{flex:0 0 auto}footer{margin-top:105px;padding:38px 0;border-top:1px solid var(--line)}.fine{margin:8px 0 0;color:var(--muted);font-size:.83rem}.links{display:flex;gap:26px}.links a:hover{text-decoration:underline}
+@media(max-width:860px){.hero{padding:145px 0 80px}.hero-grid,.two{grid-template-columns:1fr;gap:52px}.mock{max-width:560px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.step{display:grid;grid-template-columns:52px 1fr;column-gap:12px}.num{grid-row:1/3;margin:3px 0 0}.step:not(:last-child):after{top:auto;right:auto;bottom:-19px;left:31px;content:"↓";transform:none}.cta-in{align-items:flex-start;flex-direction:column}}
+@media(max-width:580px){.shell{width:min(calc(100% - 28px),var(--max))}.header{padding:18px 0}.nav>a:last-child{display:none}.hero{padding:120px 0 65px}h1{font-size:clamp(2.5rem,13vw,3.75rem)}.intro{font-size:1.04rem}.btn{width:100%}section{padding:76px 0}.head{margin-bottom:36px}.cards,.benefits{grid-template-columns:1fr}.benefit:last-child{grid-column:auto}.card{min-height:0}.cta-in{padding:36px 24px}footer{margin-top:76px}.footer-in{align-items:flex-start;flex-direction:column;gap:24px}.links{flex-direction:column;gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Semut LLC</h1>
-
-        <p><strong>AI-assisted tools for local businesses.</strong></p>
-
-        <p>
-            Semut helps local businesses handle everyday administrative work,
-            capture activity traces, and turn repeated actions into business memory.
-        </p>
-
-        <h2>Current Focus</h2>
-        <ul>
-            <li>Customer replies</li>
-            <li>Review responses</li>
-            <li>Email drafts</li>
-            <li>Quote and estimate drafts</li>
-            <li>Business activity tracking</li>
-        </ul>
-
-        <h2>Semut Trace</h2>
-        <p>
-            Semut Trace records requests, results, and activity history so local
-            businesses can see what happened and build useful memory over time.
-        </p>
-
-        <a class="button" href="https://trace.semutllc.com/new">
-            Open Semut Trace
-        </a>
-
-        <h2>Contact</h2>
-        <p>
-            For early access or local business support, contact Semut LLC.
-        </p>
-    </div>
-</body>
-</html>
+<header class="header"><nav class="nav shell" aria-label="Main navigation"><a class="brand" href="#top" aria-label="Semut home"><span class="mark">S</span>Semut LLC</a><a href="#how">How it works</a></nav></header>
+<main id="top">
+<section class="hero"><div class="hero-grid shell"><div><p class="eye">Built for local business</p><h1>Focus on Your Work. We'll Help With the Repetitive Tasks.</h1><p class="intro">Professional AI-assisted tools for local businesses. Draft replies, quotes, follow-ups, and more—while you stay in control.</p><a class="btn" href="https://trace.semutllc.com/new">Try Semut Trace <span aria-hidden="true">→</span></a><p class="note">Simple tools. Professional results. Your approval, always.</p></div><div class="mock" aria-label="Example Semut draft"><div class="mock-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="status">Draft ready</span></div><p class="label">Estimate response</p><h2>Hi Jamie, thanks for reaching out about your repair...</h2><div aria-hidden="true"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div><div class="approve"><span class="check">✓</span>Review and approve before anything is sent</div></div></div></section>
+<section class="problem"><div class="two shell"><div class="time"><strong>More</strong><p>time for customers, craftsmanship, and the work that built your reputation.</p></div><div class="copy"><p class="eye">The hidden second shift</p><h2>Your workday shouldn't end when the real work is done.</h2><p>Customer emails, estimates, appointment reminders, review responses, and follow-ups add up fast. They matter—but they can pull you away from the work only you can do.</p><p>You may not need a complicated CRM or expensive business system. You need a straightforward way to stay responsive, organized, and professional without giving up control.</p></div></div></section>
+<section aria-labelledby="help"><div class="shell"><div class="head"><p class="eye">What we help with</p><h2 id="help">Everyday admin, made easier.</h2><p>Turn a few quick notes into polished drafts that sound professional and are ready for your review.</p></div><div class="cards"><article class="card"><span class="icon">@</span><h3>Email replies</h3><p>Respond clearly and promptly, even on your busiest days.</p></article><article class="card"><span class="icon">$</span><h3>Quotes &amp; estimates</h3><p>Shape job details into a professional customer-ready draft.</p></article><article class="card"><span class="icon">★</span><h3>Review responses</h3><p>Thank customers and handle feedback with a thoughtful tone.</p></article><article class="card"><span class="icon">◷</span><h3>Appointment messages</h3><p>Confirm times, share updates, and reduce missed connections.</p></article><article class="card"><span class="icon">↗</span><h3>Follow-ups</h3><p>Keep opportunities moving without rebuilding every message.</p></article><article class="card"><span class="icon">#</span><h3>Social posts</h3><p>Share your work and stay visible in your local community.</p></article></div></div></section>
+<section class="workflow" id="how"><div class="shell"><div class="head"><p class="eye">A simple workflow</p><h2>From request to ready-to-send.</h2><p>Semut helps with the drafting. You bring the judgment, expertise, and final say.</p></div><div class="steps"><article class="step"><span class="num">01</span><div><h3>Customer Request</h3><p>A customer reaches out.</p></div></article><article class="step"><span class="num">02</span><div><h3>Owner Notes</h3><p>Add the details that matter.</p></div></article><article class="step"><span class="num">03</span><div><h3>AI Draft</h3><p>Semut creates a polished draft.</p></div></article><article class="step"><span class="num">04</span><div><h3>Review</h3><p>Check and adjust every word.</p></div></article><article class="step"><span class="num">05</span><div><h3>Send</h3><p>Approve when it feels right.</p></div></article></div></div></section>
+<section><div class="two why shell"><div><p class="eye">Why Semut</p><h2>Practical technology, built around your business.</h2><p class="lead">For contractors, cleaners, salons, handymen, repair shops, and the local businesses that keep communities running.</p></div><div class="benefits"><article class="benefit"><h3>Simple</h3><p>Useful from the first request, with no complex setup.</p></article><article class="benefit"><h3>Affordable</h3><p>The help you need without heavyweight software.</p></article><article class="benefit"><h3>Professional</h3><p>Polished communication for every customer.</p></article><article class="benefit"><h3>Local-first</h3><p>Designed around how service businesses work.</p></article><article class="benefit"><h3>You remain in control</h3><p>Semut prepares drafts. You review, edit, approve, and decide what gets sent.</p></article></div></div></section>
+<section class="cta"><div class="cta-in shell"><div><h2>Spend less time on admin. Get back to your best work.</h2><p>See how a simpler workflow can help your business stay responsive.</p></div><a class="btn" href="https://trace.semutllc.com/new">Try Semut Trace <span aria-hidden="true">→</span></a></div></section>
+</main>
+<footer><div class="footer-in shell"><div><a class="brand" href="#top"><span class="mark">S</span>Semut LLC</a><p class="fine">AI-assisted tools for local businesses.</p></div><div class="links"><a href="https://trace.semutllc.com/new">Semut Trace</a><a href="mailto:hello@semutllc.com">hello@semutllc.com</a></div></div></footer>
+</body></html>
