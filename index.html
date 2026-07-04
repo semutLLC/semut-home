@@ -11,10 +11,11 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--ink:#1a1a18;--bg:#f8f6f1;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff}
-    html{scroll-behavior:smooth}body{font:16px/1.6 Inter,sans-serif;background:var(--bg);color:var(--ink)}
+    html{scroll-behavior:smooth;scroll-padding-top:70px}
+    body{font:16px/1.6 Inter,sans-serif;background:var(--bg);color:var(--ink)}
     
     /* Navigation */
-    nav{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--rule);background:rgba(248,246,241,.98);backdrop-filter:blur(10px);z-index:100;gap:40px}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;border-bottom:1px solid var(--rule);background:rgba(248,246,241,.98);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;gap:40px}
     nav > :first-child{flex-shrink:0}
     nav ul{list-style:none;display:flex;gap:48px;align-items:center;margin:0;flex-grow:1}
     .logo{font:1.35rem 'DM Serif Display',serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
@@ -94,16 +95,17 @@
     a:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
     
     @media(max-width:1024px){
-      nav{padding:14px 5%;gap:32px}
+      nav{padding:12px 5%;gap:32px}
       nav ul{gap:32px}
       .problem-grid{grid-template-columns:repeat(2,1fr)}
     }
     
     @media(max-width:768px){
-      nav{padding:14px 5%;flex-wrap:wrap}
-      nav ul{order:3;flex-basis:100%;margin-top:14px;gap:24px}
-      .logo{order:1}
-      .nav-cta{order:2}
+      html{scroll-padding-top:140px}
+      nav{padding:12px 5%;flex-wrap:wrap}
+      nav ul{order:3;flex-basis:100%;margin-top:12px;gap:24px}
+      .logo{order:1;flex-shrink:0}
+      .nav-cta{order:2;margin-left:auto}
       
       .hero{padding:60px 5% 40px}
       h1{font-size:clamp(1.8rem,4vw,2.4rem)}
@@ -118,7 +120,7 @@
     }
     
     @media(max-width:600px){
-      nav ul{gap:16px;margin-top:10px}
+      nav ul{gap:16px}
       nav a{font-size:.8rem}
       .logo{font-size:1.1rem}
       .nav-cta{padding:8px 14px;font-size:.75rem}
