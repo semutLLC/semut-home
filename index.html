@@ -1,75 +1,557 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semut LLC</title>
+    <title>Semut LLC - Better Coordination. Better Outcomes.</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 120px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #111;
+        }
+
+        .hero .tagline {
+            font-size: 24px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        .hero .slogan {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: #222;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #444;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #222;
+            border: 2px solid #222;
+        }
+
+        .btn-secondary:hover {
             background: #f7f7f7;
+        }
+
+        /* Promise Section */
+        .promise {
+            background: #f7f7f7;
+            padding: 60px 20px;
+            margin-top: 80px;
+        }
+
+        .promise-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .promise-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #111;
+        }
+
+        .promise-content p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Why Semut Section */
+        .why-semut {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .why-semut h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            text-align: center;
+            color: #111;
+        }
+
+        .why-semut-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-semut-text h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #111;
+        }
+
+        .why-semut-text p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .why-semut-emphasis {
+            font-weight: 600;
             color: #222;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+
+        .research-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 28px;
+            background: transparent;
+            color: #222;
+            border: 2px solid #222;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .research-link:hover {
+            background: #222;
+            color: white;
+        }
+
+        .why-semut-visual {
+            background: #f7f7f7;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .layer-model {
+            font-family: monospace;
+            font-size: 16px;
+            color: #666;
+            line-height: 2;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f7f7f7;
+            padding: 100px 20px;
+            margin-top: 80px;
+        }
+
+        .products-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .products-intro {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 48px;
+            max-width: 700px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
             background: white;
             padding: 32px;
             border-radius: 12px;
+            border: 1px solid #e5e5e5;
         }
-        h1 {
-            font-size: 36px;
+
+        .product-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #111;
         }
-        .button {
-            display: inline-block;
-            padding: 12px 18px;
+
+        .product-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Vision Section */
+        .vision {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .vision h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #111;
+        }
+
+        .vision-text {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .vision-highlight {
+            font-size: 20px;
+            font-weight: 600;
+            color: #222;
+            margin-top: 32px;
+        }
+
+        /* Contact Section */
+        .contact {
             background: #222;
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 12px;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 80px;
         }
-        li {
+
+        .contact h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .contact .slogan {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin: 32px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .contact .btn {
+            background: white;
+            color: #222;
+        }
+
+        .contact .btn:hover {
+            background: #f7f7f7;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #999;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-slogan {
+            color: #ccc;
+            font-weight: 600;
             margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .tagline {
+                font-size: 18px;
+            }
+
+            .hero .description {
+                font-size: 16px;
+            }
+
+            .hero .slogan {
+                font-size: 18px;
+            }
+
+            .why-semut-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Semut LLC</h1>
-
-        <p><strong>AI-assisted tools for local businesses.</strong></p>
-
-        <p>
-            Semut helps local businesses handle everyday administrative work,
-            capture activity traces, and turn repeated actions into business memory.
-        </p>
-
-        <h2>Current Focus</h2>
+    <!-- Navigation -->
+    <nav>
         <ul>
-            <li>Customer replies</li>
-            <li>Review responses</li>
-            <li>Email drafts</li>
-            <li>Quote and estimate drafts</li>
-            <li>Business activity tracking</li>
+            <li><a href="#home" style="font-weight: 700; font-size: 16px;">Semut</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
 
-        <h2>Semut Trace</h2>
-        <p>
-            Semut Trace records requests, results, and activity history so local
-            businesses can see what happened and build useful memory over time.
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Focus on your craft.</h1>
+        <div class="tagline">Semut handles the follow-up.</div>
+        <p class="description">
+            AI assistants that help local businesses answer customers, organize work, and coordinate everyday operations.
         </p>
+        <p class="slogan">Better coordination. Better outcomes.</p>
+        <div class="cta-buttons">
+            <a href="https://trace.semutllc.com/new" class="btn btn-primary">Get Started</a>
+            <a href="#why-semut" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
 
-        <a class="button" href="https://trace.semutllc.com/new">
-            Open Semut Trace
-        </a>
+    <!-- Promise Section -->
+    <section class="promise">
+        <div class="promise-content">
+            <h2>What is a human?</h2>
+            <p>
+                As AI becomes more capable, one question grows more important: <span class="why-semut-emphasis">what does it mean to be human?</span>
+            </p>
+            <p style="margin-top: 16px;">
+                Semut explores this by building systems that help people, organizations, and AI work together more effectively.
+            </p>
+        </div>
+    </section>
 
-        <h2>Contact</h2>
-        <p>
-            For early access or local business support, contact Semut LLC.
+    <!-- Why Semut Section -->
+    <section id="why-semut" class="why-semut">
+        <h2>Why Semut?</h2>
+        <div class="why-semut-grid">
+            <div class="why-semut-text">
+                <h3>Research guides products.<br>Products improve the world.</h3>
+                <p>
+                    Semut begins with a fundamental question: how can we build technology that strengthens human agency instead of replacing it?
+                </p>
+                <p>
+                    Rather than building separate research and products, Semut weaves them together. 
+                    <span class="why-semut-emphasis">Our research informs our tools. Our tools test our ideas.</span>
+                </p>
+                <p>
+                    Today, we focus on helping local businesses coordinate better. Tomorrow, these systems will scale to teams, communities, and organizations.
+                </p>
+                <a href="https://github.com/semutLLC/semut-narrative" class="research-link">Explore the Research</a>
+            </div>
+            <div class="why-semut-visual">
+                <div class="layer-model">
+                    Trace<br>
+                    ↓<br>
+                    Memory<br>
+                    ↓<br>
+                    Knowledge<br>
+                    ↓<br>
+                    Norm<br>
+                    ↓<br>
+                    Institution
+                </div>
+                <p style="margin-top: 24px; font-size: 14px; color: #999;">
+                    The Semut Layer Model: How recorded actions become systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="products-content">
+            <h2>AI Tools Built for Local Businesses</h2>
+            <p class="products-intro">
+                Semut Trace handles the administrative work that takes time away from what you do best. Control is always yours.
+            </p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>Customer Replies</h3>
+                    <p>Draft professional responses to customer inquiries. Review and approve before sending.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Review Responses</h3>
+                    <p>Respond to customer reviews thoughtfully and on-brand, without spending hours on each one.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Quotes & Estimates</h3>
+                    <p>Generate professional quotes and estimates in minutes. Adjust and approve as needed.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Appointment Coordination</h3>
+                    <p>Send appointment confirmations, reminders, and follow-up messages automatically.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Email & Message Help</h3>
+                    <p>Get help drafting emails, texts, and social media posts that represent your business well.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Activity Tracking</h3>
+                    <p>Record every interaction. Over time, turn activity into useful business memory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="about" class="vision">
+        <h2>A Long-Term Vision</h2>
+        <p class="vision-text">
+            Semut believes better societies emerge from better coordination.
         </p>
-    </div>
+        <p class="vision-text">
+            Individuals. Teams. Businesses. Communities.
+        </p>
+        <p class="vision-text">
+            One interaction at a time.
+        </p>
+        <p class="vision-highlight">
+            Today, we help local businesses.<br>
+            Tomorrow, we build systems for all.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Ready to focus on your craft?</h2>
+        <p>
+            Semut Trace is designed for local businesses that want to spend less time on repetitive work and more time on what makes them great.
+        </p>
+        <p class="slogan">Better coordination. Better outcomes.</p>
+        <a href="https://trace.semutllc.com/new" class="btn">Open Semut Trace</a>
+        <p style="margin-top: 48px; font-size: 14px;">
+            Questions? Contact us at <strong>hello@semutllc.com</strong>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-slogan">Better coordination. Better outcomes.</p>
+        <p>&copy; 2026 Semut LLC. Building systems for better coordination.</p>
+    </footer>
 </body>
 </html>
