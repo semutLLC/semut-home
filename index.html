@@ -26,14 +26,13 @@
     .nav-cta:hover{opacity:.9}
     
     /* Hero */
-    .hero{max-width:780px;margin:auto;padding:80px 5% 60px;text-align:center}
-    .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-    h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.12;letter-spacing:-.03em;margin-bottom:24px;color:var(--ink)}
-    h1 em{color:var(--sage);font-style:normal}
-    .hero-sub{font-size:1.125rem;color:var(--muted);line-height:1.7;margin-bottom:24px}
-    .slogan{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--amber);font-weight:600;margin:24px 0;letter-spacing:-.01em}
+    .hero{max-width:780px;margin:auto;padding:100px 5% 80px;text-align:center}
+    .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+    h1{font:600 clamp(2.2rem,5vw,3.6rem)/'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:48px;color:var(--ink);line-height:1.15}
+    h1 em{color:var(--sage);font-style:normal;font-weight:700}
+    .hero-sub{font-size:1.125rem;color:var(--muted);line-height:1.8;margin-bottom:48px}
     
-    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:48px}
     .btn-primary,.btn-primary-light{background:var(--amber);color:#fff;padding:13px 28px;border-radius:7px;text-decoration:none;font-size:.975rem;font-weight:600;transition:opacity .15s;border:none;cursor:pointer;display:inline-block}
     .btn-primary:hover,.btn-primary-light:hover{opacity:.9}
     .btn-primary-light{background:transparent;color:var(--amber);border:2px solid var(--amber)}
@@ -52,7 +51,7 @@
     section{padding:80px 5%}
     .section-inner{max-width:840px;margin:auto}
     .section-tag{display:block;margin-bottom:14px;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
-    h2{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.2;letter-spacing:-.025em;margin-bottom:24px;color:var(--ink)}
+    h2{font:700 clamp(1.6rem,3.5vw,2.4rem)/'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:24px;color:var(--ink);line-height:1.2}
     .section-sub{font-size:1rem;color:var(--muted);line-height:1.8}
     
     /* Why Semut / Philosophy */
@@ -67,25 +66,26 @@
     .products-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:48px}
     .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
     .product-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:32px 24px}
-    .product-card h3{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:12px;color:var(--ink)}
+    .product-card h3{font:600 1.1rem/'DM Serif Display',serif;margin-bottom:12px;color:var(--ink)}
     .product-card p{font-size:.95rem;color:var(--muted);line-height:1.6}
     
     /* Vision */
     .vision{text-align:center;border-top:1px solid var(--rule)}
     .vision p{font-size:1.1rem;color:var(--muted);line-height:1.9;margin-bottom:12px}
-    .vision-highlight{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--amber);font-weight:600;margin-top:32px}
+    .vision-highlight{font:700 clamp(1.2rem,2.5vw,1.6rem)/'DM Serif Display',serif;color:var(--amber);margin-top:32px;letter-spacing:-.01em}
     
     /* Final CTA */
     .final-cta{background:#eaf2ed;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}
     .final-cta h2{margin-bottom:24px}
-    .final-cta p{color:var(--muted);max-width:500px;margin:0 auto 36px}
-    .final-cta .slogan{color:var(--sage)}
+    .final-cta p{color:var(--muted);max-width:500px;margin:0 auto 24px;font-size:.95rem}
+    .final-cta .slogan{font:700 clamp(1.3rem,3vw,1.8rem)/'DM Serif Display',serif;color:var(--sage);margin:32px 0;letter-spacing:-.01em}
     
     /* Footer */
     footer{border-top:1px solid var(--rule);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
     .footer-links{display:flex;gap:20px}
     .footer-links a{color:var(--muted);text-decoration:none;transition:color .15s}
     .footer-links a:hover{color:var(--ink)}
+    .footer-slogan{font:600 1rem/'DM Serif Display',serif;color:var(--muted);margin-bottom:8px}
     
     a:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
     
@@ -102,8 +102,8 @@
       .logo{order:1;flex-shrink:0}
       .nav-cta{order:2;margin-left:auto}
       
-      .hero{padding:60px 5% 40px}
-      h1{font-size:clamp(1.8rem,4vw,2.4rem)}
+      .hero{padding:80px 5% 60px}
+      h1{font-size:clamp(1.6rem,3.5vw,2.2rem)}
       
       .problem-grid{grid-template-columns:1fr}
       .ticker-stages{flex-direction:column;align-items:stretch}
@@ -119,9 +119,10 @@
       .logo{font-size:1.1rem}
       .nav-cta{padding:8px 14px;font-size:.75rem}
       
-      .hero{padding:40px 5% 30px}
-      h1{font-size:clamp(1.6rem,3.5vw,2rem)}
+      .hero{padding:60px 5% 40px}
+      h1{font-size:clamp(1.4rem,3vw,1.8rem)}
       .hero-sub{font-size:1rem}
+      .eyebrow{margin-bottom:16px}
       
       .product-card{padding:20px}
       section{padding:48px 5%}
@@ -152,7 +153,6 @@
     <span class="eyebrow">Built for local business owners</span>
     <h1>Focus on your craft.<br><em>Semut handles the follow-up.</em></h1>
     <p class="hero-sub">AI assistants that help local businesses answer customers, organize work, and coordinate everyday operations.</p>
-    <p class="slogan">Better coordination. Better outcomes.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="https://trace.semutllc.com/new">Get Started</a>
       <a class="btn-primary-light" href="#philosophy">Learn More</a>
@@ -229,7 +229,6 @@
         <h2>Better societies emerge from better coordination.</h2>
         <p>Individuals. Teams. Businesses. Communities.</p>
         <p>One interaction at a time.</p>
-        <p class="vision-highlight">Today, we help local businesses.<br>Tomorrow, we build systems for all.</p>
       </div>
     </section>
 
@@ -243,7 +242,10 @@
   </main>
 
   <footer>
-    <a class="logo" href="#top">S<span>emut</span></a>
+    <div>
+      <a class="logo" href="#top">S<span>emut</span></a>
+      <p class="footer-slogan">Better coordination. Better outcomes.</p>
+    </div>
     <div class="footer-links">
       <a href="https://trace.semutllc.com/new">Semut Trace</a>
       <a href="mailto:hello@semutllc.com">Contact</a>
