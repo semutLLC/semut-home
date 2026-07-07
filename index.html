@@ -8,19 +8,33 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 40px 20px;
+            padding: 32px 16px;
             background: #f7f7f7;
             color: #222;
+            line-height: 1.5;
         }
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: auto;
             background: white;
             padding: 32px;
             border-radius: 12px;
         }
+        nav {
+            margin-bottom: 24px;
+        }
+        nav a {
+            margin-right: 14px;
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+        }
         h1 {
-            font-size: 36px;
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+        h2 {
+            margin-top: 32px;
         }
         .button {
             display: inline-block;
@@ -29,7 +43,12 @@
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin-top: 12px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .button.secondary {
+            background: #ececec;
+            color: #222;
         }
         li {
             margin-bottom: 8px;
@@ -38,38 +57,74 @@
 </head>
 <body>
     <div class="container">
-        <h1>Semut LLC</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#research">Research</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <p><strong>AI-assisted tools for local businesses.</strong></p>
+        <section id="home">
+            <h1>Focus on your craft.</h1>
+            <h2>Semut handles the follow-up.</h2>
+            <p>
+                AI assistants that help local businesses answer customers,
+                organize work, and coordinate everyday operations.
+            </p>
+            <p><strong>Better coordination. Better outcomes.</strong></p>
+            <a class="button" href="https://trace.semutllc.com/new">Get Started</a>
+            <a class="button secondary" href="#products">Learn More</a>
+        </section>
 
-        <p>
-            Semut helps local businesses handle everyday administrative work,
-            capture activity traces, and turn repeated actions into business memory.
-        </p>
+        <section id="research">
+            <h2>Why Semut?</h2>
+            <p>As AI becomes increasingly capable, one question becomes more important:</p>
+            <p><strong>What is a human?</strong></p>
+            <p>
+                Semut explores this question by building systems that help people,
+                organizations, and AI coordinate more effectively.
+            </p>
+            <p>
+                Our research guides our products.
+                Our products improve coordination in the real world.
+            </p>
+            <a class="button secondary" href="#about">Explore Research</a>
+        </section>
 
-        <h2>Current Focus</h2>
-        <ul>
-            <li>Customer replies</li>
-            <li>Review responses</li>
-            <li>Email drafts</li>
-            <li>Quote and estimate drafts</li>
-            <li>Business activity tracking</li>
-        </ul>
+        <section id="products">
+            <h2>Current Products</h2>
+            <p>Today, Semut focuses on helping local businesses:</p>
+            <ul>
+                <li>AI Receptionist</li>
+                <li>Customer Follow-up</li>
+                <li>Appointment Coordination</li>
+                <li>Quotes &amp; Estimates</li>
+                <li>Email and Message Assistance</li>
+                <li>Task Organization</li>
+            </ul>
+            <p>Future products will build on the same coordination foundation.</p>
+        </section>
 
-        <h2>Semut Trace</h2>
-        <p>
-            Semut Trace records requests, results, and activity history so local
-            businesses can see what happened and build useful memory over time.
-        </p>
+        <section id="about">
+            <h2>Long-Term Vision</h2>
+            <p>Semut believes better societies emerge from better coordination.</p>
+            <p>
+                Individuals.<br>
+                Teams.<br>
+                Businesses.<br>
+                Communities.
+            </p>
+            <p>One interaction at a time.</p>
+            <p>
+                Mission: Build systems that improve human coordination.
+            </p>
+        </section>
 
-        <a class="button" href="https://trace.semutllc.com/new">
-            Open Semut Trace
-        </a>
-
-        <h2>Contact</h2>
-        <p>
-            For early access or local business support, contact Semut LLC.
-        </p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>For early access or local business support, contact Semut LLC.</p>
+        </section>
     </div>
 </body>
 </html>
