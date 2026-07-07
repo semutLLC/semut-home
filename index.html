@@ -36,6 +36,7 @@
             border-radius: 6px;
             text-decoration: none;
             z-index: 1000;
+            clip: rect(0 0 0 0);
             clip-path: inset(50%);
             width: 1px;
             height: 1px;
@@ -164,10 +165,6 @@
             }
             .features {
                 grid-template-columns: 1fr;
-            }
-            .flow-step + .flow-step::before {
-                content: "";
-                margin-right: 0;
             }
         }
     </style>
