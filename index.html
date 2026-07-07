@@ -20,6 +20,9 @@
             padding: 32px;
             border-radius: 12px;
         }
+        section {
+            margin-top: 36px;
+        }
         nav {
             margin-bottom: 24px;
         }
@@ -78,6 +81,58 @@
         li {
             margin-bottom: 8px;
         }
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .flow-step {
+            background: #f1f1f1;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-weight: 600;
+        }
+        .flow-arrow {
+            font-weight: 700;
+            color: #555;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+        }
+        .feature-card {
+            background: #f7f7f7;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 0;
+        }
+        .cta-panel {
+            background: #f7f7f7;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        @media (max-width: 680px) {
+            .container {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+            .subtitle {
+                font-size: 24px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .flow-arrow {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,10 +140,11 @@
         <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#philosophy">Why Semut Exists</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#cta">Try Semut Trace</a></li>
             </ul>
         </nav>
 
@@ -101,60 +157,71 @@
             </p>
             <p><strong>Better coordination. Better outcomes.</strong></p>
             <a class="button" href="https://trace.semutllc.com/new">Get Started</a>
-            <a class="button secondary" href="#products">Learn More</a>
+            <a class="button secondary" href="#how-it-works">Learn More</a>
         </section>
 
-        <section id="research">
-            <h2>Research: Why Semut?</h2>
-            <p>As AI becomes increasingly capable, one question becomes more important:</p>
-            <p><strong>What is a human?</strong></p>
-            <p>
-                Semut explores this question by building systems that help people,
-                organizations, and AI coordinate more effectively.
-            </p>
-            <p>
-                Our research guides our products.
-                Our products improve coordination in the real world.
-            </p>
-            <a class="button secondary" href="https://github.com/semutLLC/semut-home#philosophy">Explore Research</a>
+        <section id="how-it-works">
+            <h2>How it works</h2>
+            <div class="flow" aria-label="Semut workflow">
+                <span class="flow-step">You Provide</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">AI Drafts</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">You Approve</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">We Record</span>
+            </div>
         </section>
 
-        <section id="products">
-            <h2>Current Products</h2>
-            <p>Today, Semut focuses on helping local businesses:</p>
-            <ul>
-                <li>AI Reception</li>
-                <li>Customer Follow-Up</li>
-                <li>Appointment Coordination</li>
-                <li>Quote and Estimate Support</li>
-                <li>Email and Message Assistance</li>
-                <li>Task Organization</li>
+        <section id="features">
+            <h2>Features</h2>
+            <ul class="features">
+                <li class="feature-card">Customer Replies</li>
+                <li class="feature-card">Review Responses</li>
+                <li class="feature-card">Quotes &amp; Estimates</li>
+                <li class="feature-card">Appointment Coordination</li>
+                <li class="feature-card">Email &amp; Social Media</li>
+                <li class="feature-card">Activity Tracking</li>
             </ul>
-            <p>Future products will build on the same coordination foundation.</p>
         </section>
 
-        <section id="about">
-            <h2>About: Long-Term Vision</h2>
+        <section id="philosophy">
+            <p>
+                Semut Trace is the first practical application of our research into human coordination.
+                Every interaction helps build better systems that keep people in control while reducing repetitive work.
+            </p>
+            <h2>Why Semut Exists</h2>
+            <p>Semut began with a simple question:</p>
+            <p><strong>What does it mean to be human in an age of AI?</strong></p>
+            <p>We believe AI should strengthen human agency rather than replace it.</p>
+            <p>
+                Our research informs the products we build, and our products continuously test those ideas in the real world.
+            </p>
+            <p>
+                Today we help local businesses coordinate everyday work.
+                Tomorrow these same coordination systems can scale to teams, communities, and organizations.
+            </p>
+        </section>
+
+        <section id="vision">
+            <h2>Long-Term Vision</h2>
             <p>Semut believes better societies emerge from better coordination.</p>
-            <p>This applies across every level:</p>
             <ul>
                 <li>Individuals</li>
                 <li>Teams</li>
                 <li>Businesses</li>
                 <li>Communities</li>
             </ul>
-            <p>
-                By improving coordination at each level, Semut aims to create
-                better outcomes one interaction at a time.
-            </p>
-            <p>
-                Mission: Build systems that improve human coordination.
-            </p>
+            <p>One interaction at a time.</p>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>For early access or local business support, contact Semut LLC.</p>
+        <section id="cta">
+            <div class="cta-panel">
+                <h2>Have a real message on your list?</h2>
+                <p>Try it with Semut.</p>
+                <p><strong>Better coordination. Better outcomes.</strong></p>
+                <a class="button" href="https://trace.semutllc.com/new">Open Semut Trace</a>
+            </div>
         </section>
     </div>
 </body>
