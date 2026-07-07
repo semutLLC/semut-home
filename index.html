@@ -29,9 +29,19 @@
             text-decoration: none;
             font-weight: 600;
         }
+        nav a:focus {
+            outline: 2px solid #222;
+            outline-offset: 2px;
+        }
         h1 {
             font-size: 40px;
             margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 12px;
         }
         h2 {
             margin-top: 32px;
@@ -57,7 +67,7 @@
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav aria-label="Primary">
             <a href="#home">Home</a>
             <a href="#products">Products</a>
             <a href="#research">Research</a>
@@ -67,7 +77,7 @@
 
         <section id="home">
             <h1>Focus on your craft.</h1>
-            <h2>Semut handles the follow-up.</h2>
+            <p class="subtitle">Semut handles the follow-up.</p>
             <p>
                 AI assistants that help local businesses answer customers,
                 organize work, and coordinate everyday operations.
