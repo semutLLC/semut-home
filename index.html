@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--ink:#1a1a18;--bg:#f8f6f1;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff}
+    :root{--ink:#1a1a18;--bg:#f4f2ea;--bg-soft:#fbfaf6;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff}
     html{scroll-behavior:smooth;scroll-padding-top:70px}
-    body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;background:var(--bg);color:var(--ink)}
+    body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;background:linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 35%,#efede3 100%);color:var(--ink)}
     
     /* Navigation */
     nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;border-bottom:1px solid var(--rule);background:rgba(248,246,241,.98);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10;gap:40px}
@@ -62,7 +62,7 @@
     .explore-research:hover{background:var(--ink);color:var(--bg)}
     
     /* Products */
-    .products{background:#fafaf8;border-top:1px solid var(--rule)}
+    .products{background:rgba(255,255,255,.45);border-top:1px solid var(--rule)}
     .products-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:48px}
     .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
     .product-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:32px 24px}
@@ -75,7 +75,7 @@
     .vision-highlight{font-family:'DM Serif Display',serif;font-weight:700;font-size:clamp(1.2rem,2.5vw,1.6rem);line-height:1.25;color:var(--amber);margin-top:32px;letter-spacing:-.01em}
     
     /* Final CTA */
-    .final-cta{background:#eaf2ed;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}
+    .final-cta{background:#e7efe9;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}
     .final-cta h2{margin-bottom:24px}
     .final-cta p{color:var(--muted);max-width:500px;margin:0 auto 24px;font-size:.95rem}
     .final-cta .slogan{font-family:'DM Serif Display',serif;font-weight:700;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.25;color:var(--sage);margin:32px 0;letter-spacing:-.01em}
@@ -143,6 +143,7 @@
   <nav aria-label="Main navigation">
     <a class="logo" href="#top">S<span>emut</span></a>
     <ul>
+      <li><a href="#top">Home</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#philosophy">Research</a></li>
       <li><a href="#vision">About</a></li>
@@ -154,7 +155,7 @@
   <header class="hero" id="top">
     <span class="eyebrow">Built for local business owners</span>
     <h1>Focus on your craft.<br><em>Semut handles the follow-up.</em></h1>
-    <p class="hero-sub">AI assistants that help local businesses answer customers, organize work, and coordinate everyday operations.</p>
+    <p class="hero-sub">AI assistants that help local businesses answer customers, organize work, and coordinate everyday operations. Better coordination. Better outcomes.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="https://trace.semut.ai/new">Get Started</a>
       <a class="btn-primary-light" href="#philosophy">Learn More</a>
@@ -162,15 +163,15 @@
   </header>
 
   <div class="ticker-wrap">
-    <p class="ticker-label">What Semut does</p>
+    <p class="ticker-label">Messaging hierarchy</p>
     <div class="ticker-stages">
-      <div class="t-stage"><span class="t-tag">You provide</span><div class="t-text">Request details</div></div>
+      <div class="t-stage"><span class="t-tag">Question</span><div class="t-text">What is a human?</div></div>
       <span class="t-arrow" aria-hidden="true">→</span>
-      <div class="t-stage"><span class="t-tag">AI drafts</span><div class="t-text">Professional response</div></div>
+      <div class="t-stage"><span class="t-tag">Mission</span><div class="t-text">Improve human coordination</div></div>
       <span class="t-arrow" aria-hidden="true">→</span>
-      <div class="t-stage"><span class="t-tag">You approve</span><div class="t-text">Send or revise</div></div>
+      <div class="t-stage"><span class="t-tag">Promise</span><div class="t-text">Better outcomes</div></div>
       <span class="t-arrow" aria-hidden="true">→</span>
-      <div class="t-stage"><span class="t-tag">We record</span><div class="t-text">Add to memory</div></div>
+      <div class="t-stage"><span class="t-tag">Today</span><div class="t-text">Help local businesses</div></div>
     </div>
   </div>
 
@@ -179,12 +180,12 @@
       <div class="section-inner">
         <span class="section-tag">Why Semut exists</span>
         <h2>What is a human?</h2>
-        <p class="section-sub">As AI becomes more capable, one question grows more important: what does it mean to be human?</p>
+        <p class="section-sub">As AI becomes increasingly capable, one question becomes more important: what is a human?</p>
         
         <div class="philosophy-text">
-          <p><strong>Semut explores this question by building systems that strengthen human agency.</strong></p>
-          <p>Rather than building separate research and products, Semut weaves them together. Our research informs our tools. Our tools test our ideas.</p>
-          <p>Today, we focus on helping local businesses coordinate better. Tomorrow, these systems will scale to teams, communities, and organizations.</p>
+          <p><strong>Semut explores this question by building systems that help people, organizations, and AI coordinate more effectively.</strong></p>
+          <p>Our research guides our products. Our products improve coordination in the real world.</p>
+          <p>Today, we focus on helping local businesses. Future products build on the same coordination foundation.</p>
           <a href="https://github.com/semutLLC/semut-narrative" class="explore-research">Explore the Research →</a>
         </div>
       </div>
@@ -192,34 +193,34 @@
 
     <section id="products" class="products">
       <div class="section-inner">
-        <span class="section-tag">Your daily admin work</span>
-        <h2>The messages that take time every week.</h2>
-        <p class="products-intro">Semut Trace records requests, drafts responses, and builds useful memory over time. Control always stays with you.</p>
+        <span class="section-tag">Current products</span>
+        <h2>Today, Semut focuses on helping local businesses.</h2>
+        <p class="products-intro">AI support for everyday operations, customer communication, and task coordination.</p>
         
         <div class="problem-grid">
           <div class="product-card">
-            <h3>Customer Replies</h3>
-            <p>Draft professional responses to customer inquiries. Review and approve before sending.</p>
+            <h3>AI Receptionist</h3>
+            <p>Answer customer inquiries quickly and consistently while keeping your team in control.</p>
           </div>
           <div class="product-card">
-            <h3>Review Responses</h3>
-            <p>Respond to customer reviews thoughtfully and on-brand, without spending hours on each one.</p>
+            <h3>Customer Follow-up</h3>
+            <p>Draft and send follow-up messages so leads and customers do not fall through the cracks.</p>
           </div>
           <div class="product-card">
             <h3>Quotes & Estimates</h3>
-            <p>Generate professional quotes and estimates in minutes. Adjust and approve as needed.</p>
+            <p>Create clear, professional quotes and estimates in minutes with quick human approval.</p>
           </div>
           <div class="product-card">
             <h3>Appointment Coordination</h3>
-            <p>Send confirmations, reminders, and follow-up messages automatically.</p>
+            <p>Coordinate confirmations and reminders to keep schedules and customer expectations aligned.</p>
           </div>
           <div class="product-card">
-            <h3>Email & Social Media</h3>
-            <p>Get help drafting emails, texts, and social posts that represent your business well.</p>
+            <h3>Email and Message Assistance</h3>
+            <p>Draft everyday replies across email and messaging channels with less manual effort.</p>
           </div>
           <div class="product-card">
-            <h3>Activity Tracking</h3>
-            <p>Record every interaction. Over time, turn activity into useful business memory.</p>
+            <h3>Task Organization</h3>
+            <p>Organize requests, handoffs, and next actions so work stays coordinated across the team.</p>
           </div>
         </div>
       </div>
