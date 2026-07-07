@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--ink:#1a1a18;--bg:#f4f2ea;--bg-soft:#fbfaf6;--bg-deep:#efede3;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff}
-    html{scroll-behavior:smooth;scroll-padding-top:70px}
+    :root{--ink:#1a1a18;--bg:#f4f2ea;--bg-soft:#fbfaf6;--bg-deep:#efede3;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff;--nav-offset:70px;--nav-offset-mobile:140px}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--nav-offset)}
     body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;background:linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 35%,var(--bg-deep) 100%);color:var(--ink)}
     
     /* Navigation */
@@ -90,7 +90,7 @@
     .footer-links a:hover{color:var(--ink)}
     .footer-slogan{font-family:'DM Serif Display',serif;font-weight:600;font-size:1rem;line-height:1.3;color:var(--muted);margin-bottom:8px}
     
-    a:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
+    a:focus-visible,button:focus-visible,.btn-primary:focus-visible,.btn-primary-light:focus-visible,.nav-cta:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
     
     @media(max-width:1024px){
       nav{padding:12px 5%;gap:32px}
@@ -99,7 +99,7 @@
     }
     
     @media(max-width:768px){
-      html{scroll-padding-top:140px}
+      html{scroll-padding-top:var(--nav-offset-mobile)}
       nav{padding:12px 5%;flex-wrap:wrap}
       nav ul{order:3;flex-basis:100%;margin-top:12px;gap:24px}
       .logo{order:1;flex-shrink:0}
