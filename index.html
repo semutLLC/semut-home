@@ -28,7 +28,7 @@
         }
         .skip-link {
             position: absolute;
-            left: -9999px;
+            left: 12px;
             top: 12px;
             background: #222;
             color: #fff;
@@ -36,9 +36,17 @@
             border-radius: 6px;
             text-decoration: none;
             z-index: 1000;
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            white-space: nowrap;
         }
         .skip-link:focus {
-            left: 12px;
+            clip-path: none;
+            width: auto;
+            height: auto;
+            overflow: visible;
         }
         nav a {
             margin-right: 14px;
@@ -204,12 +212,42 @@
         <section id="features">
             <h2>Features</h2>
             <ul class="features">
-                <li class="feature-card"><article><h3 class="feature-title">Customer Replies</h3><p class="feature-copy">Draft responses for incoming customer messages.</p></article></li>
-                <li class="feature-card"><article><h3 class="feature-title">Review Responses</h3><p class="feature-copy">Respond professionally to public reviews.</p></article></li>
-                <li class="feature-card"><article><h3 class="feature-title">Quotes &amp; Estimates</h3><p class="feature-copy">Prepare clear drafts for customer requests.</p></article></li>
-                <li class="feature-card"><article><h3 class="feature-title">Appointment Coordination</h3><p class="feature-copy">Handle booking and scheduling follow-up.</p></article></li>
-                <li class="feature-card"><article><h3 class="feature-title">Email &amp; Social Media</h3><p class="feature-copy">Create consistent outreach and updates.</p></article></li>
-                <li class="feature-card"><article><h3 class="feature-title">Activity Tracking</h3><p class="feature-copy">Keep a usable record of daily operations.</p></article></li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Customer Replies</h3>
+                        <p class="feature-copy">Draft responses for incoming customer messages.</p>
+                    </article>
+                </li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Review Responses</h3>
+                        <p class="feature-copy">Respond professionally to public reviews.</p>
+                    </article>
+                </li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Quotes &amp; Estimates</h3>
+                        <p class="feature-copy">Prepare clear drafts for customer requests.</p>
+                    </article>
+                </li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Appointment Coordination</h3>
+                        <p class="feature-copy">Handle booking and scheduling follow-up.</p>
+                    </article>
+                </li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Email &amp; Social Media</h3>
+                        <p class="feature-copy">Create consistent outreach and updates.</p>
+                    </article>
+                </li>
+                <li class="feature-card">
+                    <article>
+                        <h3 class="feature-title">Activity Tracking</h3>
+                        <p class="feature-copy">Keep a usable record of daily operations.</p>
+                    </article>
+                </li>
             </ul>
             <p>
                 Semut Trace is the first practical application of our human-coordination research for local business operations.
