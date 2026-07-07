@@ -15,7 +15,7 @@
     body{font:16px/1.6 Inter,sans-serif;background:var(--bg);color:var(--ink)}
     
     /* Navigation */
-    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;border-bottom:1px solid var(--rule);background:rgba(248,246,241,.98);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10;gap:40px}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;border-bottom:1px solid var(--rule);background:rgba(248,246,241,.98);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
     nav > :first-child{flex-shrink:0}
     nav ul{list-style:none;display:flex;gap:48px;align-items:center;margin:0;flex-grow:1}
     .logo{font:1.35rem 'DM Serif Display',serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
@@ -28,7 +28,7 @@
     /* Hero */
     .hero{max-width:780px;margin:auto;padding:100px 5% 80px;text-align:center}
     .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
-    h1{font:600 clamp(2.2rem,5vw,3.6rem)/'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:48px;color:var(--ink);line-height:1.15}
+    h1{font:600 clamp(2.2rem,5vw,3.6rem) 'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:48px;color:var(--ink);line-height:1.15}
     h1 em{color:var(--sage);font-style:normal;font-weight:700}
     .hero-sub{font-size:1.125rem;color:var(--muted);line-height:1.8;margin-bottom:48px}
     
@@ -51,41 +51,44 @@
     section{padding:80px 5%}
     .section-inner{max-width:840px;margin:auto}
     .section-tag{display:block;margin-bottom:14px;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
-    h2{font:700 clamp(1.6rem,3.5vw,2.4rem)/'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:24px;color:var(--ink);line-height:1.2}
+    h2{font:700 clamp(1.6rem,3.5vw,2.4rem) 'DM Serif Display',serif;letter-spacing:-.02em;margin-bottom:24px;color:var(--ink);line-height:1.2}
     .section-sub{font-size:1rem;color:var(--muted);line-height:1.8}
-    
-    /* Why Semut / Philosophy */
-    .philosophy{border-top:1px solid var(--rule)}
-    .philosophy-text p{margin-bottom:16px;line-height:1.8}
-    .philosophy-text strong{color:var(--amber)}
-    .explore-research{display:inline-block;margin-top:24px;padding:12px 28px;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:7px;text-decoration:none;font-weight:600;transition:all .15s}
-    .explore-research:hover{background:var(--ink);color:var(--bg)}
     
     /* Products */
     .products{background:#fafaf8;border-top:1px solid var(--rule)}
     .products-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:48px}
     .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
     .product-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:32px 24px}
-    .product-card h3{font:600 1.1rem/'DM Serif Display',serif;margin-bottom:12px;color:var(--ink)}
+    .product-card h3{font:600 1.1rem 'DM Serif Display',serif;margin-bottom:12px;color:var(--ink)}
     .product-card p{font-size:.95rem;color:var(--muted);line-height:1.6}
+    
+    /* Bridge Sentence */
+    .bridge{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--rule);max-width:700px}
+    
+    /* Why Semut / Philosophy */
+    .philosophy{border-top:1px solid var(--rule);background:#fff}
+    .philosophy-text p{margin-bottom:16px;line-height:1.8}
+    .philosophy-text strong{color:var(--amber)}
+    .explore-research{display:inline-block;margin-top:24px;padding:12px 28px;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:7px;text-decoration:none;font-weight:600;transition:all .15s}
+    .explore-research:hover{background:var(--ink);color:var(--bg)}
     
     /* Vision */
     .vision{text-align:center;border-top:1px solid var(--rule)}
     .vision p{font-size:1.1rem;color:var(--muted);line-height:1.9;margin-bottom:12px}
-    .vision-highlight{font:700 clamp(1.2rem,2.5vw,1.6rem)/'DM Serif Display',serif;color:var(--amber);margin-top:32px;letter-spacing:-.01em}
+    .vision-highlight{font:700 clamp(1.2rem,2.5vw,1.6rem) 'DM Serif Display',serif;color:var(--amber);margin-top:32px;letter-spacing:-.01em}
     
     /* Final CTA */
     .final-cta{background:#eaf2ed;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}
     .final-cta h2{margin-bottom:24px}
     .final-cta p{color:var(--muted);max-width:500px;margin:0 auto 24px;font-size:.95rem}
-    .final-cta .slogan{font:700 clamp(1.3rem,3vw,1.8rem)/'DM Serif Display',serif;color:var(--sage);margin:32px 0;letter-spacing:-.01em}
+    .final-cta .slogan{font:700 clamp(1.3rem,3vw,1.8rem) 'DM Serif Display',serif;color:var(--sage);margin:32px 0;letter-spacing:-.01em}
     
     /* Footer */
     footer{border-top:1px solid var(--rule);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
     .footer-links{display:flex;gap:20px}
     .footer-links a{color:var(--muted);text-decoration:none;transition:color .15s}
     .footer-links a:hover{color:var(--ink)}
-    .footer-slogan{font:600 1rem/'DM Serif Display',serif;color:var(--muted);margin-bottom:8px}
+    .footer-slogan{font:600 1rem 'DM Serif Display',serif;color:var(--muted);margin-bottom:8px}
     
     a:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
     
@@ -155,12 +158,12 @@
     <p class="hero-sub">AI assistants that help local businesses answer customers, organize work, and coordinate everyday operations.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="https://trace.semut.ai/new">Get Started</a>
-      <a class="btn-primary-light" href="#philosophy">Learn More</a>
+      <a class="btn-primary-light" href="#products">Learn More</a>
     </div>
   </header>
 
   <div class="ticker-wrap">
-    <p class="ticker-label">What Semut does</p>
+    <p class="ticker-label">How it works</p>
     <div class="ticker-stages">
       <div class="t-stage"><span class="t-tag">You provide</span><div class="t-text">Request details</div></div>
       <span class="t-arrow">→</span>
@@ -173,21 +176,6 @@
   </div>
 
   <main>
-    <section id="philosophy" class="philosophy">
-      <div class="section-inner">
-        <span class="section-tag">Why Semut exists</span>
-        <h2>What is a human?</h2>
-        <p class="section-sub">As AI becomes more capable, one question grows more important: what does it mean to be human?</p>
-        
-        <div class="philosophy-text">
-          <p><strong>Semut explores this question by building systems that strengthen human agency.</strong></p>
-          <p>Rather than building separate research and products, Semut weaves them together. Our research informs our tools. Our tools test our ideas.</p>
-          <p>Today, we focus on helping local businesses coordinate better. Tomorrow, these systems will scale to teams, communities, and organizations.</p>
-          <a href="https://github.com/semutLLC/semut-narrative" class="explore-research">Explore the Research →</a>
-        </div>
-      </div>
-    </section>
-
     <section id="products" class="products">
       <div class="section-inner">
         <span class="section-tag">Your daily admin work</span>
@@ -219,6 +207,23 @@
             <h3>Activity Tracking</h3>
             <p>Record every interaction. Over time, turn activity into useful business memory.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="philosophy">
+      <div class="section-inner">
+        <p class="bridge">Semut Trace is the first practical application of our research into human coordination. Every interaction helps build better systems that keep people in control while reducing repetitive work.</p>
+        
+        <span class="section-tag">Why Semut exists</span>
+        <h2>What does it mean to be human in an age of AI?</h2>
+        
+        <div class="philosophy-text">
+          <p><strong>We believe AI should strengthen human agency rather than replace it.</strong></p>
+          <p>Semut began with a simple question: What does it mean to be human in an age of AI?</p>
+          <p>Our research informs the products we build, and our products continuously test those ideas in the real world.</p>
+          <p>Today we help local businesses coordinate everyday work. Tomorrow these same coordination systems can scale to teams, communities, and organizations.</p>
+          <a href="https://github.com/semutLLC/semut-narrative" class="explore-research">Explore the Research →</a>
         </div>
       </div>
     </section>
