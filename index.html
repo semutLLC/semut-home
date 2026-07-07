@@ -81,22 +81,26 @@
         li {
             margin-bottom: 8px;
         }
-        .flow {
+        .flow-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             align-items: center;
             margin-top: 8px;
+            padding: 0;
+            list-style: none;
         }
         .flow-step {
             background: #f1f1f1;
             border-radius: 8px;
             padding: 8px 12px;
             font-weight: 600;
+            margin: 0;
         }
-        .flow-arrow {
-            font-weight: 700;
+        .flow-step + .flow-step::before {
+            content: "→";
             color: #555;
+            margin-right: 10px;
         }
         .features {
             display: grid;
@@ -110,6 +114,15 @@
             border-radius: 10px;
             padding: 12px 14px;
             margin: 0;
+        }
+        .feature-title {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .feature-copy {
+            font-size: 14px;
+            color: #444;
         }
         .cta-panel {
             background: #f7f7f7;
@@ -129,8 +142,9 @@
             .features {
                 grid-template-columns: 1fr;
             }
-            .flow-arrow {
-                display: none;
+            .flow-step + .flow-step::before {
+                content: "";
+                margin-right: 0;
             }
         }
     </style>
@@ -162,26 +176,23 @@
 
         <section id="how-it-works">
             <h2>How it works</h2>
-            <div class="flow" aria-label="Semut four-step workflow: You Provide, AI Drafts, You Approve, We Record">
-                <span class="flow-step">You Provide</span>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <span class="flow-step">AI Drafts</span>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <span class="flow-step">You Approve</span>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <span class="flow-step">We Record</span>
-            </div>
+            <ol class="flow-list" aria-label="Semut four-step workflow">
+                <li class="flow-step">You Provide</li>
+                <li class="flow-step">AI Drafts</li>
+                <li class="flow-step">You Approve</li>
+                <li class="flow-step">We Record</li>
+            </ol>
         </section>
 
         <section id="features">
             <h2>Features</h2>
             <ul class="features">
-                <li class="feature-card">Customer Replies</li>
-                <li class="feature-card">Review Responses</li>
-                <li class="feature-card">Quotes &amp; Estimates</li>
-                <li class="feature-card">Appointment Coordination</li>
-                <li class="feature-card">Email &amp; Social Media</li>
-                <li class="feature-card">Activity Tracking</li>
+                <li class="feature-card"><span class="feature-title">Customer Replies</span><span class="feature-copy">Draft responses for incoming customer messages.</span></li>
+                <li class="feature-card"><span class="feature-title">Review Responses</span><span class="feature-copy">Respond professionally to public reviews.</span></li>
+                <li class="feature-card"><span class="feature-title">Quotes &amp; Estimates</span><span class="feature-copy">Prepare clear drafts for customer requests.</span></li>
+                <li class="feature-card"><span class="feature-title">Appointment Coordination</span><span class="feature-copy">Handle booking and scheduling follow-up.</span></li>
+                <li class="feature-card"><span class="feature-title">Email &amp; Social Media</span><span class="feature-copy">Create consistent outreach and updates.</span></li>
+                <li class="feature-card"><span class="feature-title">Activity Tracking</span><span class="feature-copy">Keep a usable record of daily operations.</span></li>
             </ul>
             <p>
                 Semut Trace is the first practical application of our human-coordination research for local business operations.
