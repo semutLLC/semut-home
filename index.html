@@ -1,75 +1,54 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semut LLC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            background: #f7f7f7;
-            color: #222;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 32px;
-            border-radius: 12px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 18px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 12px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Semut drafts quotes, review responses, appointment replies, and other repetitive business messages for local business owners.">
+  <title>Semut LLC | Practical Tools for Local Businesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--ink:#1a1a18;--bg:#f8f6f1;--sage:#7a9e87;--amber:#c9873a;--muted:#6b6b68;--rule:#e0ddd6;--card:#fff}
+    html{scroll-behavior:smooth}body{font:16px/1.6 Inter,sans-serif;background:var(--bg);color:var(--ink)}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--rule);position:sticky;top:0;background:rgba(248,246,241,.96);backdrop-filter:blur(12px);z-index:100}
+    .logo{font:1.35rem 'DM Serif Display',serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}.logo span{color:var(--sage)}
+    .nav-cta,.btn-primary,.btn-primary-light{background:var(--amber);color:#fff;padding:10px 20px;border-radius:7px;text-decoration:none;font-size:.875rem;font-weight:600;transition:opacity .15s,transform .15s}.nav-cta:hover,.btn-primary:hover,.btn-primary-light:hover{opacity:.88;transform:translateY(-1px)}
+    .hero{max-width:780px;margin:auto;padding:88px 5% 72px;text-align:center}.eyebrow,.section-tag,.ticker-label,.t-tag{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}.eyebrow{display:inline-block;margin-bottom:20px}
+    h1,h2,h3,.ex-num,.price-amount,blockquote{font-family:'DM Serif Display',serif}h1{font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.12;letter-spacing:-.03em;margin-bottom:24px}h1 em{color:var(--sage);font-weight:400}.hero-sub{font-size:1.1rem;color:var(--muted);max-width:540px;margin:0 auto 40px;line-height:1.7}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.btn-primary,.btn-primary-light{padding:13px 28px;font-size:.975rem}.btn-ghost{color:var(--ink);padding:12px 28px;border:1.5px solid var(--rule);border-radius:7px;text-decoration:none;font-weight:500;transition:border-color .15s}.btn-ghost:hover{border-color:var(--muted)}
+    .ticker-wrap{background:var(--ink);color:var(--bg);padding:48px 5%;text-align:center}.ticker-label{margin-bottom:20px}.ticker-stages{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}.t-stage{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px 22px;min-width:170px;text-align:left}.t-tag{font-size:.68rem;margin-bottom:6px}.t-text{font-size:.9rem;color:#e8e5dc;line-height:1.4}.t-arrow{color:rgba(255,255,255,.25);padding:0 4px}.t-stage.drafting{border-color:var(--sage);animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{box-shadow:0 0 0 5px rgba(122,158,135,.25)}}.cursor{display:inline-block;width:2px;height:.85em;background:var(--sage);margin-left:2px;vertical-align:middle;animation:blink .9s step-end infinite}@keyframes blink{50%{opacity:0}}
+    section{padding:80px 5%}.section-inner{max-width:840px;margin:auto}.section-tag{display:block;margin-bottom:14px}h2{font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.2;letter-spacing:-.025em;margin-bottom:18px}.section-sub{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:600px}
+    .problem{border-top:1px solid var(--rule)}.problem-grid,.control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}.problem-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:24px}.icon{font-size:1.4rem;margin-bottom:12px}.problem-card h3,.ex-body h3,.control-item h3{font-size:1.1rem;margin-bottom:8px;line-height:1.25}.problem-card p,.ex-body p,.control-item p{font-size:.9rem;color:var(--muted);line-height:1.65}
+    .examples{background:#f2efe8}.example-list{margin-top:44px;display:flex;flex-direction:column;gap:16px}.example-item{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;display:grid;grid-template-columns:auto 1fr;gap:20px}.ex-num{font-size:2rem;color:var(--rule);line-height:1}.ex-body h3{font-size:1.2rem}.ex-flow{display:inline-flex;gap:6px;align-items:center;margin-top:12px;flex-wrap:wrap}.ex-pill{font-size:.75rem;font-weight:500;background:#f2efe8;border:1px solid var(--rule);border-radius:50px;padding:4px 12px;color:var(--muted)}.ex-pill.active{background:#eaf2ed;border-color:var(--sage);color:#5e866d}.ex-sep{color:#bbb}
+    .control{border-top:1px solid var(--rule)}.control-item{padding:24px;border-left:3px solid var(--rule)}.control-item .check{width:28px;height:28px;border-radius:50%;background:#eaf2ed;color:var(--sage);display:grid;place-items:center;font-weight:700;margin-bottom:14px}
+    .pricing{background:var(--ink);color:var(--bg)}.pricing .section-sub{color:rgba(248,246,241,.6)}.price-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:36px;margin-top:40px;max-width:520px}.price-badge{display:inline-block;background:var(--sage);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 13px;border-radius:50px;margin-bottom:24px}.price-amount{font-size:3rem;line-height:1;letter-spacing:-.03em}.price-amount sup{font-size:1.3rem}.price-note{font-size:.85rem;color:rgba(248,246,241,.55);margin:6px 0 28px}.feature-list{list-style:none;margin-bottom:32px}.feature-list li{display:flex;gap:10px;font-size:.93rem;color:rgba(248,246,241,.85);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}.feature-list li::before{content:'✓';color:var(--sage);font-weight:700}.btn-primary-light{display:inline-block}.no-auto{font-size:.8rem;color:rgba(248,246,241,.45);margin-top:12px}
+    .building{border-top:1px solid var(--rule)}blockquote{font-style:italic;font-size:clamp(1.25rem,2.8vw,1.8rem);line-height:1.45;letter-spacing:-.02em;max-width:660px;margin-top:36px;padding-left:24px;border-left:3px solid var(--sage)}
+    .final-cta{background:#eaf2ed;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}.final-cta p{color:var(--muted);max-width:500px;margin:0 auto 36px}
+    footer{border-top:1px solid var(--rule);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}.footer-links{display:flex;gap:20px}.footer-links a{font-size:.85rem;color:var(--muted);text-decoration:none}.footer-links a:hover{color:var(--ink)}
+    a:focus-visible{outline:3px solid var(--sage);outline-offset:4px}
+    @media(max-width:720px){.problem-grid,.control-grid{grid-template-columns:1fr}.ticker-stages{flex-direction:column;align-items:stretch}.t-arrow{transform:rotate(90deg);align-self:center}.example-item{grid-template-columns:1fr}.ex-num{font-size:1.4rem}}
+    @media(max-width:600px){nav{padding:16px 5%}.hero{padding-top:64px}section{padding:64px 5%}.price-card{padding:28px 22px}.final-cta{padding:68px 5%}footer{flex-direction:column;align-items:flex-start}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.t-stage.drafting,.cursor{animation:none}}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Semut LLC</h1>
-
-        <p><strong>AI-assisted tools for local businesses.</strong></p>
-
-        <p>
-            Semut helps local businesses handle everyday administrative work,
-            capture activity traces, and turn repeated actions into business memory.
-        </p>
-
-        <h2>Current Focus</h2>
-        <ul>
-            <li>Customer replies</li>
-            <li>Review responses</li>
-            <li>Email drafts</li>
-            <li>Quote and estimate drafts</li>
-            <li>Business activity tracking</li>
-        </ul>
-
-        <h2>Semut Trace</h2>
-        <p>
-            Semut Trace records requests, results, and activity history so local
-            businesses can see what happened and build useful memory over time.
-        </p>
-
-        <a class="button" href="https://trace.semutllc.com/new">
-            Open Semut Trace
-        </a>
-
-        <h2>Contact</h2>
-        <p>
-            For early access or local business support, contact Semut LLC.
-        </p>
-    </div>
+  <nav aria-label="Main navigation"><a class="logo" href="#top">S<span>emut</span></a><a class="nav-cta" href="https://trace.semutllc.com/new">Try a free sample &rarr;</a></nav>
+  <header class="hero" id="top"><span class="eyebrow">Built for local business owners</span><h1>Focus on your craft.<br><em>Semut handles the follow-up.</em></h1><p class="hero-sub">Quote requests. Review responses. Appointment replies. Semut drafts the repetitive messages so you have a professional starting point&mdash;not another blank screen.</p><div class="hero-actions"><a class="btn-primary" href="https://trace.semutllc.com/new">Try a free sample &rarr;</a><a class="btn-ghost" href="#examples">See how it works</a></div></header>
+  <div class="ticker-wrap"><p class="ticker-label">What Semut does</p><div class="ticker-stages"><div class="t-stage"><div class="t-tag">You provide</div><div class="t-text">Price, timing, job scope, or customer context</div></div><span class="t-arrow">&rarr;</span><div class="t-stage drafting"><div class="t-tag">Semut drafts</div><div class="t-text">A clear, professional message<span class="cursor"></span></div></div><span class="t-arrow">&rarr;</span><div class="t-stage"><div class="t-tag">You decide</div><div class="t-text">Edit, rewrite, or send&mdash;it's always your call</div></div></div></div>
+  <main>
+    <section class="problem"><div class="section-inner"><span class="section-tag">The daily grind</span><h2>Good work shouldn't end at the job site.</h2><p class="section-sub">A quote request arrives between jobs. A review needs a thoughtful answer. A customer wants to confirm tomorrow's appointment. Each message is small&mdash;together, they take your evening.</p><div class="problem-grid"><article class="problem-card"><div class="icon" aria-hidden="true">&#128203;</div><h3>Quote requests pile up</h3><p>You know the price. Turning your notes into a clear reply takes longer than it should.</p></article><article class="problem-card"><div class="icon" aria-hidden="true">&#11088;</div><h3>Reviews deserve real answers</h3><p>A thoughtful response builds trust, but finding the right words after a long day is hard.</p></article><article class="problem-card"><div class="icon" aria-hidden="true">&#128197;</div><h3>Appointment questions repeat</h3><p>Same questions, same answers&mdash;every week. You shouldn't have to write each one from scratch.</p></article></div></div></section>
+    <section class="examples" id="examples"><div class="section-inner"><span class="section-tag">Real requests. Practical drafts.</span><h2>The messages that take time every week.</h2><p class="section-sub">You provide the facts and context. Semut helps organize them into a draft you can review and send.</p><div class="example-list">
+      <article class="example-item"><div class="ex-num">01</div><div class="ex-body"><h3>A customer asks for a quote</h3><p>Add your price, timing, scope, and job details. Semut can help turn those notes into a clear reply for you to review before sending.</p><div class="ex-flow"><span class="ex-pill">Customer request</span><span class="ex-sep">&rarr;</span><span class="ex-pill">Your notes</span><span class="ex-sep">&rarr;</span><span class="ex-pill active">Draft ready</span></div></div></article>
+      <article class="example-item"><div class="ex-num">02</div><div class="ex-body"><h3>A customer leaves a review</h3><p>Share the review and the tone you want. Semut can help draft a thoughtful response you can edit in your own voice.</p><div class="ex-flow"><span class="ex-pill">Review</span><span class="ex-sep">&rarr;</span><span class="ex-pill">Context</span><span class="ex-sep">&rarr;</span><span class="ex-pill active">Draft ready</span></div></div></article>
+      <article class="example-item"><div class="ex-num">03</div><div class="ex-body"><h3>A customer asks about an appointment</h3><p>Add the confirmed time and anything they should know. Semut prepares a helpful reply for your approval.</p><div class="ex-flow"><span class="ex-pill">Question</span><span class="ex-sep">&rarr;</span><span class="ex-pill">Schedule details</span><span class="ex-sep">&rarr;</span><span class="ex-pill active">Draft ready</span></div></div></article>
+    </div></div></section>
+    <section class="control"><div class="section-inner"><span class="section-tag">Your business. Your decision.</span><h2>Semut helps with the draft. You stay in control.</h2><p class="section-sub">The tool should support your judgment, not replace it. Your experience, pricing, and customer relationships guide every response.</p><div class="control-grid"><article class="control-item"><div class="check">&#10003;</div><h3>You review before sending</h3><p>Read, edit, or rewrite every draft before it reaches a customer.</p></article><article class="control-item"><div class="check">&#10003;</div><h3>No auto-send, ever</h3><p>Customer messages are never sent automatically. That step is always yours.</p></article><article class="control-item"><div class="check">&#10003;</div><h3>You have the final say</h3><p>Semut offers a starting point. What goes out is entirely up to you.</p></article></div></div></section>
+    <section class="pricing"><div class="section-inner"><span class="section-tag">Early access</span><h2>Professional draft help without a complicated system.</h2><p class="section-sub">Early access is a chance for us to learn what's genuinely useful, while giving you a straightforward tool to try.</p><div class="price-card"><span class="price-badge">Early participant offer</span><div class="price-amount"><sup>$</sup>49</div><div class="price-note">first month&mdash;then $99 / month</div><ul class="feature-list"><li>Professional drafts for common customer messages</li><li>Quote, review, and appointment workflows</li><li>Owner review required before anything is sent</li><li>A free sample task so you can see if it fits</li></ul><a class="btn-primary-light" href="https://trace.semutllc.com/new">Try a free sample first &rarr;</a><p class="no-auto">No auto-sending. See the draft before you commit to anything.</p></div></div></section>
+    <section class="building"><div class="section-inner"><span class="section-tag">Built by listening</span><h2>We're building this with local businesses.</h2><p class="section-sub">Every business works differently. We don't want to force small businesses into complicated software they don't need. Your feedback helps us decide what to improve and what to leave simple.</p><blockquote>&ldquo;We want to listen, understand your daily workflow, and build tools that help with the repetitive work&mdash;so you can focus on the quality of your service.&rdquo;</blockquote></div></section>
+    <section class="final-cta"><h2>Have a real message on your list?</h2><p>Try it with Semut. Review the draft, change what you need, and tell us what would make it more useful.</p><a class="btn-primary" href="https://trace.semutllc.com/new">Try Semut Trace &rarr;</a></section>
+  </main>
+  <footer><a class="logo" href="#top">S<span>emut</span></a><div class="footer-links"><a href="https://trace.semutllc.com/new">Semut Trace</a><a href="mailto:hello@semutllc.com">Contact</a></div></footer>
 </body>
 </html>
