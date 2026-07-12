@@ -39,7 +39,13 @@
     .explore-research{display:inline-block;margin-top:24px;padding:12px 28px;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:7px;text-decoration:none;font-weight:600;transition:all .15s}
     .explore-research:hover{background:var(--ink);color:var(--bg)}
     .vision{text-align:center;border-top:1px solid var(--rule)}
-    .vision p{font-size:1.1rem;color:var(--muted);line-height:1.9;margin-bottom:12px}
+    .vision .section-inner{max-width:900px}
+    .vision-intro{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.8}
+    .coordination-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;list-style:none;margin:40px 0 32px;counter-reset:coordination-step}
+    .coordination-flow li{counter-increment:coordination-step;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:22px 12px;color:var(--ink);font-weight:600}
+    .coordination-flow li::before{content:"0" counter(coordination-step);display:block;margin-bottom:8px;color:var(--sage);font-size:.7rem;letter-spacing:.1em}
+    .agency-note{max-width:720px;margin:auto;padding:24px 28px;border-left:4px solid var(--amber);background:#fffaf3;text-align:left;color:var(--ink);font-size:1rem;line-height:1.7}
+    .agency-note strong{color:var(--amber)}
     .final-cta{background:#eaf2ed;border-top:1px solid #c5dccb;text-align:center;padding:88px 5%}
     .final-cta h2{margin-bottom:24px}
     .final-cta p{color:var(--muted);max-width:540px;margin:0 auto 24px;font-size:.95rem}
@@ -78,6 +84,9 @@
       h1{font-size:clamp(1.4rem,3vw,1.8rem)}
       .hero-sub{font-size:1rem}
       .eyebrow{margin-bottom:16px}
+      .coordination-flow{grid-template-columns:repeat(2,1fr);margin:32px 0 24px}
+      .coordination-flow li{padding:18px 10px}
+      .agency-note{padding:20px}
       section{padding:48px 5%}
       .final-cta{padding:48px 5%}
       footer{flex-direction:column;align-items:flex-start;gap:12px}
@@ -128,9 +137,17 @@
     <section id="vision" class="vision">
       <div class="section-inner">
         <span class="section-tag">Long-term vision</span>
-        <h2>Better societies emerge from better coordination.</h2>
-        <p>Individuals. Teams. Businesses. Communities.</p>
-        <p>One interaction at a time.</p>
+        <h2>From intentions to actions.</h2>
+        <p class="vision-intro">Our vision is for Semut to become the coordination layer that helps individuals, teams, and organizations turn what they intend to do into consistent action.</p>
+
+        <ol class="coordination-flow" aria-label="What turns intentions into actions">
+          <li>Communication</li>
+          <li>Memory</li>
+          <li>Coordination</li>
+          <li>Feedback</li>
+        </ol>
+
+        <p class="agency-note"><strong>AI should strengthen human agency.</strong> It should help people coordinate better—not replace them.</p>
       </div>
     </section>
 
